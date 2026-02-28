@@ -1,0 +1,483 @@
+[
+  {
+    "id": "playfair-inter",
+    "headingFont": {
+      "family": "Playfair Display",
+      "weights": [400, 700, 900],
+      "category": "serif"
+    },
+    "bodyFont": {
+      "family": "Inter",
+      "weights": [400, 500, 600],
+      "category": "sans-serif"
+    },
+    "method": "modular-scale",
+    "mood": ["editorial", "elegant"],
+    "useCase": ["blog", "portfolio"],
+    "notes": "High-contrast serif headlines against a neutral sans body create a classic editorial hierarchy."
+  },
+  {
+    "id": "dm-serif-dm-sans",
+    "headingFont": {
+      "family": "DM Serif Display",
+      "weights": [400],
+      "category": "serif"
+    },
+    "bodyFont": {
+      "family": "DM Sans",
+      "weights": [400, 500, 700],
+      "category": "sans-serif"
+    },
+    "method": "utopia-fluid",
+    "mood": ["modern", "warm"],
+    "useCase": ["landing-page", "portfolio"],
+    "notes": "Same design family ensures optical harmony while the serif/sans contrast provides clear hierarchy."
+  },
+  {
+    "id": "space-grotesk-inter",
+    "headingFont": {
+      "family": "Space Grotesk",
+      "weights": [500, 700],
+      "category": "sans-serif"
+    },
+    "bodyFont": {
+      "family": "Inter",
+      "weights": [400, 500],
+      "category": "sans-serif"
+    },
+    "method": "tailwind",
+    "mood": ["modern", "technical"],
+    "useCase": ["saas", "dashboard"],
+    "notes": "Two geometric sans-serifs that share proportional DNA but differ enough in personality to create subtle distinction."
+  },
+  {
+    "id": "merriweather-source-sans",
+    "headingFont": {
+      "family": "Merriweather",
+      "weights": [400, 700, 900],
+      "category": "serif"
+    },
+    "bodyFont": {
+      "family": "Source Sans 3",
+      "weights": [400, 600],
+      "category": "sans-serif"
+    },
+    "method": "modular-scale",
+    "mood": ["classic", "warm"],
+    "useCase": ["blog", "docs"],
+    "notes": "Both designed for screen readability, making this pairing exceptionally legible at all sizes."
+  },
+  {
+    "id": "poppins-roboto",
+    "headingFont": {
+      "family": "Poppins",
+      "weights": [500, 600, 700],
+      "category": "sans-serif"
+    },
+    "bodyFont": {
+      "family": "Roboto",
+      "weights": [400, 500],
+      "category": "sans-serif"
+    },
+    "method": "bootstrap",
+    "mood": ["friendly", "modern"],
+    "useCase": ["saas", "e-commerce"],
+    "notes": "Poppins' geometric roundness paired with Roboto's mechanical precision balances approachability and professionalism."
+  },
+  {
+    "id": "lora-roboto",
+    "headingFont": {
+      "family": "Lora",
+      "weights": [400, 600, 700],
+      "category": "serif"
+    },
+    "bodyFont": {
+      "family": "Roboto",
+      "weights": [400, 500],
+      "category": "sans-serif"
+    },
+    "method": "utopia-fluid",
+    "mood": ["elegant", "warm"],
+    "useCase": ["blog", "portfolio"],
+    "notes": "Lora's brushed curves provide editorial warmth while Roboto keeps body text clean and neutral."
+  },
+  {
+    "id": "montserrat-open-sans",
+    "headingFont": {
+      "family": "Montserrat",
+      "weights": [500, 600, 700],
+      "category": "sans-serif"
+    },
+    "bodyFont": {
+      "family": "Open Sans",
+      "weights": [400, 600],
+      "category": "sans-serif"
+    },
+    "method": "bootstrap",
+    "mood": ["modern", "minimal"],
+    "useCase": ["corporate", "landing-page"],
+    "notes": "Both are workhorses with wide language support, making this a safe and versatile corporate default."
+  },
+  {
+    "id": "oswald-lato",
+    "headingFont": {
+      "family": "Oswald",
+      "weights": [400, 500, 700],
+      "category": "sans-serif"
+    },
+    "bodyFont": {
+      "family": "Lato",
+      "weights": [400, 700],
+      "category": "sans-serif"
+    },
+    "method": "modular-scale",
+    "mood": ["bold", "modern"],
+    "useCase": ["landing-page", "e-commerce"],
+    "notes": "Oswald's tall condensed letterforms command attention in headlines, while Lato's humanist warmth reads easily at body sizes."
+  },
+  {
+    "id": "raleway-lato",
+    "headingFont": {
+      "family": "Raleway",
+      "weights": [400, 600, 700],
+      "category": "sans-serif"
+    },
+    "bodyFont": {
+      "family": "Lato",
+      "weights": [400, 700],
+      "category": "sans-serif"
+    },
+    "method": "tailwind",
+    "mood": ["elegant", "minimal"],
+    "useCase": ["portfolio", "landing-page"],
+    "notes": "Raleway's thin strokes and distinctive W give headings a refined quality, complemented by Lato's friendly neutrality."
+  },
+  {
+    "id": "work-sans-source-serif",
+    "headingFont": {
+      "family": "Work Sans",
+      "weights": [500, 600, 700],
+      "category": "sans-serif"
+    },
+    "bodyFont": {
+      "family": "Source Serif 4",
+      "weights": [400, 600],
+      "category": "serif"
+    },
+    "method": "utopia-fluid",
+    "mood": ["editorial", "warm"],
+    "useCase": ["blog", "docs"],
+    "notes": "Reversing the typical serif-heading/sans-body convention creates a contemporary editorial feel with excellent body readability."
+  },
+  {
+    "id": "archivo-roboto",
+    "headingFont": {
+      "family": "Archivo",
+      "weights": [500, 600, 700],
+      "category": "sans-serif"
+    },
+    "bodyFont": {
+      "family": "Roboto",
+      "weights": [400, 500],
+      "category": "sans-serif"
+    },
+    "method": "shadcn",
+    "mood": ["technical", "modern"],
+    "useCase": ["dashboard", "saas"],
+    "notes": "Archivo's squared grotesque forms feel engineered and precise, ideal for data-dense interfaces paired with Roboto's clarity."
+  },
+  {
+    "id": "cormorant-garamond-fira-sans",
+    "headingFont": {
+      "family": "Cormorant Garamond",
+      "weights": [400, 600, 700],
+      "category": "serif"
+    },
+    "bodyFont": {
+      "family": "Fira Sans",
+      "weights": [400, 500],
+      "category": "sans-serif"
+    },
+    "method": "modular-scale",
+    "mood": ["elegant", "editorial"],
+    "useCase": ["portfolio", "blog"],
+    "notes": "Cormorant Garamond's high contrast and sharp serifs lend an upscale literary feel, grounded by Fira Sans' humanist body text."
+  },
+  {
+    "id": "nunito-nunito-sans",
+    "headingFont": {
+      "family": "Nunito",
+      "weights": [600, 700, 800],
+      "category": "sans-serif"
+    },
+    "bodyFont": {
+      "family": "Nunito Sans",
+      "weights": [400, 600],
+      "category": "sans-serif"
+    },
+    "method": "bootstrap",
+    "mood": ["friendly", "playful"],
+    "useCase": ["saas", "e-commerce"],
+    "notes": "Rounded terminals on both faces create a consistently warm and approachable tone across the entire type hierarchy."
+  },
+  {
+    "id": "bitter-source-sans",
+    "headingFont": {
+      "family": "Bitter",
+      "weights": [400, 700],
+      "category": "serif"
+    },
+    "bodyFont": {
+      "family": "Source Sans 3",
+      "weights": [400, 600],
+      "category": "sans-serif"
+    },
+    "method": "tailwind",
+    "mood": ["warm", "classic"],
+    "useCase": ["blog", "docs"],
+    "notes": "Bitter was designed specifically for comfortable screen reading, making it a reliable serif heading choice paired with Source Sans' clarity."
+  },
+  {
+    "id": "rubik-roboto-mono",
+    "headingFont": {
+      "family": "Rubik",
+      "weights": [500, 600, 700],
+      "category": "sans-serif"
+    },
+    "bodyFont": {
+      "family": "Roboto",
+      "weights": [400, 500],
+      "category": "sans-serif"
+    },
+    "monoFont": {
+      "family": "Roboto Mono",
+      "weights": [400, 500],
+      "category": "monospace"
+    },
+    "method": "shadcn",
+    "mood": ["friendly", "modern"],
+    "useCase": ["saas", "dashboard"],
+    "notes": "Rubik's slightly rounded corners soften a technical interface, and the optional Roboto Mono adds a consistent code-display layer."
+  },
+  {
+    "id": "libre-baskerville-open-sans",
+    "headingFont": {
+      "family": "Libre Baskerville",
+      "weights": [400, 700],
+      "category": "serif"
+    },
+    "bodyFont": {
+      "family": "Open Sans",
+      "weights": [400, 600],
+      "category": "sans-serif"
+    },
+    "method": "utopia-fluid",
+    "mood": ["classic", "elegant"],
+    "useCase": ["blog", "corporate"],
+    "notes": "Baskerville's transitional serifs carry centuries of typographic authority, balanced by Open Sans' modern accessibility."
+  },
+  {
+    "id": "sora-inter",
+    "headingFont": {
+      "family": "Sora",
+      "weights": [500, 600, 700],
+      "category": "sans-serif"
+    },
+    "bodyFont": {
+      "family": "Inter",
+      "weights": [400, 500],
+      "category": "sans-serif"
+    },
+    "method": "shadcn",
+    "mood": ["modern", "minimal"],
+    "useCase": ["saas", "landing-page"],
+    "notes": "Sora's geometric construction with subtle humanist touches creates clean modern headings, while Inter handles UI text flawlessly."
+  },
+  {
+    "id": "fraunces-outfit",
+    "headingFont": {
+      "family": "Fraunces",
+      "weights": [400, 700, 900],
+      "category": "serif"
+    },
+    "bodyFont": {
+      "family": "Outfit",
+      "weights": [400, 500, 600],
+      "category": "sans-serif"
+    },
+    "method": "modular-scale",
+    "mood": ["bold", "playful"],
+    "useCase": ["e-commerce", "landing-page"],
+    "notes": "Fraunces' exaggerated soft serifs and optical size axis make it a striking display face, counterbalanced by Outfit's geometric simplicity."
+  },
+  {
+    "id": "crimson-pro-cabinet-grotesk",
+    "headingFont": {
+      "family": "Crimson Pro",
+      "weights": [400, 600, 700],
+      "category": "serif"
+    },
+    "bodyFont": {
+      "family": "Albert Sans",
+      "weights": [400, 500, 600],
+      "category": "sans-serif"
+    },
+    "method": "utopia-fluid",
+    "mood": ["editorial", "elegant"],
+    "useCase": ["blog", "portfolio"],
+    "notes": "Crimson Pro's old-style figures and refined proportions pair naturally with Albert Sans' modern geometric clarity."
+  },
+  {
+    "id": "josefin-sans-lato",
+    "headingFont": {
+      "family": "Josefin Sans",
+      "weights": [400, 600, 700],
+      "category": "sans-serif"
+    },
+    "bodyFont": {
+      "family": "Lato",
+      "weights": [400, 700],
+      "category": "sans-serif"
+    },
+    "method": "tailwind",
+    "mood": ["elegant", "minimal"],
+    "useCase": ["portfolio", "landing-page"],
+    "notes": "Josefin Sans' vintage geometric elegance and high x-height create distinctive headings that pair well with Lato's understated body text."
+  },
+  {
+    "id": "plus-jakarta-inter",
+    "headingFont": {
+      "family": "Plus Jakarta Sans",
+      "weights": [500, 600, 700, 800],
+      "category": "sans-serif"
+    },
+    "bodyFont": {
+      "family": "Inter",
+      "weights": [400, 500],
+      "category": "sans-serif"
+    },
+    "method": "shadcn",
+    "mood": ["modern", "friendly"],
+    "useCase": ["saas", "dashboard"],
+    "notes": "Plus Jakarta Sans brings warmth and personality to headings while Inter handles dense interface text with pixel-level precision."
+  },
+  {
+    "id": "spectral-karla",
+    "headingFont": {
+      "family": "Spectral",
+      "weights": [400, 600, 700],
+      "category": "serif"
+    },
+    "bodyFont": {
+      "family": "Karla",
+      "weights": [400, 500, 700],
+      "category": "sans-serif"
+    },
+    "method": "modular-scale",
+    "mood": ["editorial", "warm"],
+    "useCase": ["blog", "docs"],
+    "notes": "Both designed by Google for screen use, Spectral's refined serifs and Karla's grotesque simplicity create a harmonious reading experience."
+  },
+  {
+    "id": "vollkorn-fira-sans",
+    "headingFont": {
+      "family": "Vollkorn",
+      "weights": [400, 600, 700, 900],
+      "category": "serif"
+    },
+    "bodyFont": {
+      "family": "Fira Sans",
+      "weights": [400, 500],
+      "category": "sans-serif"
+    },
+    "method": "bootstrap",
+    "mood": ["classic", "warm"],
+    "useCase": ["blog", "corporate"],
+    "notes": "Vollkorn's sturdy text serifs were designed as a free alternative to premium book faces, pairing naturally with Fira Sans' open proportions."
+  },
+  {
+    "id": "cabin-old-standard",
+    "headingFont": {
+      "family": "Cabin",
+      "weights": [400, 500, 600, 700],
+      "category": "sans-serif"
+    },
+    "bodyFont": {
+      "family": "Old Standard TT",
+      "weights": [400, 700],
+      "category": "serif"
+    },
+    "method": "modular-scale",
+    "mood": ["classic", "editorial"],
+    "useCase": ["blog", "portfolio"],
+    "notes": "Cabin's humanist sans headings over Old Standard's traditional serif body text reverses convention for a scholarly yet modern feel."
+  },
+  {
+    "id": "manrope-bitter",
+    "headingFont": {
+      "family": "Manrope",
+      "weights": [500, 600, 700, 800],
+      "category": "sans-serif"
+    },
+    "bodyFont": {
+      "family": "Bitter",
+      "weights": [400, 500],
+      "category": "serif"
+    },
+    "method": "utopia-fluid",
+    "mood": ["modern", "warm"],
+    "useCase": ["blog", "landing-page"],
+    "notes": "Manrope's clean geometric headings with Bitter's screen-optimized serif body create a comfortable long-form reading experience."
+  },
+  {
+    "id": "lexend-inter",
+    "headingFont": {
+      "family": "Lexend",
+      "weights": [400, 500, 600, 700],
+      "category": "sans-serif"
+    },
+    "bodyFont": {
+      "family": "Inter",
+      "weights": [400, 500],
+      "category": "sans-serif"
+    },
+    "method": "tailwind",
+    "mood": ["minimal", "modern"],
+    "useCase": ["docs", "saas"],
+    "notes": "Lexend was designed for improved reading proficiency, making it an accessibility-focused heading choice paired with Inter's UI precision."
+  },
+  {
+    "id": "eb-garamond-work-sans",
+    "headingFont": {
+      "family": "EB Garamond",
+      "weights": [400, 600, 700],
+      "category": "serif"
+    },
+    "bodyFont": {
+      "family": "Work Sans",
+      "weights": [400, 500],
+      "category": "sans-serif"
+    },
+    "method": "bootstrap",
+    "mood": ["elegant", "classic"],
+    "useCase": ["portfolio", "blog"],
+    "notes": "EB Garamond's Renaissance-era letterforms provide timeless elegance in headings, with Work Sans keeping body text contemporary."
+  },
+  {
+    "id": "geologica-noto-sans",
+    "headingFont": {
+      "family": "Geologica",
+      "weights": [400, 600, 700],
+      "category": "sans-serif"
+    },
+    "bodyFont": {
+      "family": "Noto Sans",
+      "weights": [400, 500, 700],
+      "category": "sans-serif"
+    },
+    "method": "shadcn",
+    "mood": ["technical", "minimal"],
+    "useCase": ["dashboard", "docs"],
+    "notes": "Geologica's variable optical sizing and Noto Sans' unmatched language coverage make this pairing ideal for global technical products."
+  }
+]
