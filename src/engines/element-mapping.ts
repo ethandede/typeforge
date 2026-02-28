@@ -18,7 +18,7 @@ const DEFAULTS: MappingDefault[] = [
   { element: 'body', stepOffset: -99, fontWeight: 400, textTransform: 'none', marginBottom: 'var(--space-md)' },
   { element: 'small', stepOffset: -100, fontWeight: 400, textTransform: 'none', marginBottom: 'var(--space-xs)' },
   { element: 'caption', stepOffset: -100, fontWeight: 400, textTransform: 'none', marginBottom: 'var(--space-xs)' },
-  { element: 'blockquote', stepOffset: -98, fontWeight: 400, textTransform: 'none', marginBottom: 'var(--space-lg)' },
+  { element: 'blockquote', stepOffset: -99, fontWeight: 400, textTransform: 'none', marginBottom: 'var(--space-lg)' },
   { element: 'code', stepOffset: -101, fontWeight: 400, textTransform: 'none', marginBottom: 'var(--space-md)' },
   { element: 'overline', stepOffset: -101, fontWeight: 600, textTransform: 'uppercase', marginBottom: 'var(--space-xs)' },
 ]
