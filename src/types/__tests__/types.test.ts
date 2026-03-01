@@ -134,6 +134,7 @@ describe('Type definitions', () => {
       lineHeight: 1.1,
       letterSpacing: '-0.02em',
       textTransform: 'none',
+      marginTop: '0',
       marginBottom: 'var(--space-md)',
     }
     expect(mapping.element).toBe('h1')
@@ -170,6 +171,7 @@ describe('Type definitions', () => {
           lineHeight: 1.5,
           letterSpacing: null,
           textTransform: 'none',
+          marginTop: '0',
           marginBottom: '0',
         },
       ],
