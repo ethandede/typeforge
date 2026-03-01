@@ -85,6 +85,9 @@ export function generateCssCustomProperties(system: TypographySystem): string {
     if (mapping.textTransform !== 'none') {
       lines.push(`  text-transform: ${mapping.textTransform};`)
     }
+    if (mapping.marginTop !== '0') {
+      lines.push(`  margin-top: ${mapping.marginTop};`)
+    }
     lines.push(`  margin-bottom: ${mapping.marginBottom};`)
     lines.push('}')
     lines.push('')

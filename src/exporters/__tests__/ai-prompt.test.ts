@@ -16,8 +16,8 @@ function buildMockSystem(): TypographySystem {
       { name: 'step-3', index: 3, sizePx: 31.25, sizeRem: 1.953, clamp: null, lineHeight: 1.3, letterSpacing: '-0.02em' },
     ],
     elementMappings: [
-      { element: 'h1', scaleStep: 3, fontWeight: 700, lineHeight: 1.3, letterSpacing: '-0.02em', textTransform: 'none', marginBottom: 'var(--space-lg)' },
-      { element: 'body', scaleStep: 0, fontWeight: 400, lineHeight: 1.5, letterSpacing: null, textTransform: 'none', marginBottom: 'var(--space-md)' },
+      { element: 'h1', scaleStep: 3, fontWeight: 700, lineHeight: 1.3, letterSpacing: '-0.02em', textTransform: 'none', marginTop: '0', marginBottom: 'var(--space-lg)' },
+      { element: 'body', scaleStep: 0, fontWeight: 400, lineHeight: 1.5, letterSpacing: null, textTransform: 'none', marginTop: '0', marginBottom: 'var(--space-md)' },
     ],
     spacingSteps: [],
   }

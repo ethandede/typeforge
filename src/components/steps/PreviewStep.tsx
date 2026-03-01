@@ -20,6 +20,13 @@ function loadGoogleFont(family: string, weights: number[]) {
   document.head.appendChild(link)
 }
 
+function resolveSpacingVar(varRef: string, spacingSteps: { name: string; sizePx: number }[]): string {
+  const match = varRef.match(/^var\((--.+)\)$/)
+  if (!match) return varRef
+  const step = spacingSteps.find(s => s.name === match[1])
+  return step ? `${step.sizePx}px` : '16px'
+}
+
 function useComputedStyles() {
   const { state } = useTypography()
 
@@ -44,12 +51,13 @@ function useComputedStyles() {
         lineHeight: mapping.lineHeight,
         letterSpacing: mapping.letterSpacing ?? undefined,
         textTransform: mapping.textTransform !== 'none' ? mapping.textTransform : undefined,
-        marginBottom: '0.75em',
+        marginTop: resolveSpacingVar(mapping.marginTop, state.spacingSteps),
+        marginBottom: resolveSpacingVar(mapping.marginBottom, state.spacingSteps),
       }
     }
 
     return { styles, headingFont, bodyFont }
-  }, [state.elementMappings, state.scaleSteps, state.headingFont, state.bodyFont])
+  }, [state.elementMappings, state.scaleSteps, state.headingFont, state.bodyFont, state.spacingSteps])
 }
 
 function ArticleTemplate({ styles }: { styles: Record<string, React.CSSProperties> }) {
@@ -83,6 +91,16 @@ function ArticleTemplate({ styles }: { styles: Record<string, React.CSSPropertie
         Fixed scales work well when you know your target viewport and have defined breakpoints. Fluid
         scales shine when you want a single definition that adapts continuously across all screen sizes.
       </p>
+      <h5 style={styles.h5}>A Note on Browser Support</h5>
+      <p style={styles.body}>
+        CSS clamp() is supported in all modern browsers. If you need to support older browsers,
+        the modular scale approach with media queries is a reliable fallback.
+      </p>
+      <h6 style={styles.h6}>Further Reading</h6>
+      <p style={styles.body}>
+        For a deeper dive into the mathematics behind type scales, see the resources linked in the
+        documentation section of this guide.
+      </p>
       <p style={styles.small}>
         Published on February 28, 2026 by EE Creative
       </p>
@@ -102,7 +120,7 @@ function LandingTemplate({ styles }: { styles: Record<string, React.CSSPropertie
         </p>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2em', marginBottom: '2em' }}>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
         <div>
           <h3 style={styles.h3}>Curated Pairings</h3>
           <p style={styles.body}>
@@ -132,6 +150,9 @@ function LandingTemplate({ styles }: { styles: Record<string, React.CSSPropertie
         <h4 style={styles.h4}>3. Export and ship</h4>
         <p style={styles.body}>Copy CSS custom properties, Tailwind config, or AI prompts.</p>
       </div>
+
+      <h5 style={styles.h5}>Trusted by developers worldwide</h5>
+      <p style={styles.small}>Join thousands of developers who use TypeForge to build consistent type systems.</p>
     </div>
   )
 }
@@ -142,7 +163,7 @@ function DashboardTemplate({ styles }: { styles: Record<string, React.CSSPropert
       <h1 style={styles.h1}>Dashboard</h1>
       <p style={styles.body}>Welcome back. Here's what happened while you were away.</p>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1em', marginBottom: '2em' }}>
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
         {['Revenue', 'Users', 'Sessions', 'Conversion'].map(metric => (
           <div key={metric} style={{ border: '1px solid #e5e7eb', borderRadius: '8px', padding: '1em' }}>
             <div style={styles.caption}>{metric}</div>
@@ -176,9 +197,13 @@ function DashboardTemplate({ styles }: { styles: Record<string, React.CSSPropert
       <p style={styles.body}>
         Manage users, view reports, or configure your account settings from the sidebar.
       </p>
+
+      <h5 style={styles.h5}>API Endpoint</h5>
       <code style={{ ...styles.code, background: '#f3f4f6', padding: '0.25em 0.5em', borderRadius: '4px' }}>
         GET /api/v1/dashboard/metrics
       </code>
+
+      <h6 style={styles.h6}>Last updated: February 28, 2026</h6>
     </div>
   )
 }
@@ -237,8 +262,16 @@ function DocsTemplate({ styles }: { styles: Record<string, React.CSSProperties> 
         <code style={{ ...styles.code, background: '#f3f4f6', padding: '0.15em 0.4em', borderRadius: '3px' }}>ScaleStep[]</code>
         — An array of scale step objects.
       </p>
+
+      <h5 style={styles.h5}>ScaleStep Properties</h5>
+      <p style={styles.body}>
+        Each step includes name, index, sizePx, sizeRem, lineHeight, letterSpacing, and an optional
+        clamp value for fluid scales.
+      </p>
+
+      <h6 style={styles.h6}>Deprecated</h6>
       <p style={styles.small}>
-        See the full type reference for ScaleStep properties and additional configuration options.
+        The legacy computeScale() function has been removed in v2.0. Use computeModularScale() instead.
       </p>
     </div>
   )
@@ -318,7 +351,7 @@ export function PreviewStep() {
           style={{
             width: `${VIEWPORT_WIDTHS[viewport]}px`,
             maxWidth: '100%',
-            overflow: 'hidden',
+            overflow: 'auto',
           }}
         >
           <TemplateComponent styles={styles} />

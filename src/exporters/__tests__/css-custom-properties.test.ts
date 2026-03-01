@@ -13,8 +13,8 @@ function buildMockSystem(): TypographySystem {
   ]
 
   const elementMappings: ElementMapping[] = [
-    { element: 'h1', scaleStep: 2, fontWeight: 700, lineHeight: 1.35, letterSpacing: '-0.01em', textTransform: 'none', marginBottom: 'var(--space-lg)' },
-    { element: 'body', scaleStep: 0, fontWeight: 400, lineHeight: 1.5, letterSpacing: null, textTransform: 'none', marginBottom: 'var(--space-md)' },
+    { element: 'h1', scaleStep: 2, fontWeight: 700, lineHeight: 1.35, letterSpacing: '-0.01em', textTransform: 'none', marginTop: '0', marginBottom: 'var(--space-lg)' },
+    { element: 'body', scaleStep: 0, fontWeight: 400, lineHeight: 1.5, letterSpacing: null, textTransform: 'none', marginTop: '0', marginBottom: 'var(--space-md)' },
   ]
 
   const spacingSteps: SpacingStep[] = [

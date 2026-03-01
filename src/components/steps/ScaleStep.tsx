@@ -323,14 +323,14 @@ function TailwindScaleControls() {
   )
 }
 
-function ScalePreview() {
+function ComputedScaleTable() {
   const { state } = useTypography()
 
   if (state.scaleSteps.length === 0) return null
 
   return (
-    <div className="space-y-4">
-      <h3 className="text-sm font-medium text-gray-700">Computed Scale</h3>
+    <div className="mt-6">
+      <h3 className="text-sm font-medium text-gray-700 mb-2">Computed Scale</h3>
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
@@ -357,24 +357,62 @@ function ScalePreview() {
           </tbody>
         </table>
       </div>
+    </div>
+  )
+}
 
-      <div className="border-t border-gray-200 pt-4">
-        <h3 className="text-sm font-medium text-gray-700 mb-3">Visual Preview</h3>
-        <div className="space-y-2">
-          {[...state.scaleSteps].reverse().map(step => (
-            <div key={step.name} className="flex items-baseline gap-3">
-              <span className="text-xs font-mono text-gray-400 w-16 shrink-0">{step.name}</span>
-              <span
-                style={{
-                  fontSize: `${Math.min(step.sizePx, 72)}px`,
-                  lineHeight: step.lineHeight,
-                  fontFamily: state.headingFont ? `"${state.headingFont.family}", serif` : 'serif',
-                }}
-              >
-                The quick brown fox
-              </span>
-            </div>
-          ))}
+function HeadingPreview() {
+  const { state } = useTypography()
+
+  if (state.scaleSteps.length === 0) return null
+
+  const headingFont = state.headingFont ? `"${state.headingFont.family}", serif` : 'serif'
+  const bodyFont = state.bodyFont ? `"${state.bodyFont.family}", sans-serif` : 'sans-serif'
+  const steps = [...state.scaleSteps].reverse()
+
+  // Map heading levels to scale steps (largest steps first)
+  const headings = steps.slice(0, 6).map((step, i) => ({
+    label: `h${i + 1}`,
+    step,
+  }))
+
+  // Body text uses step 0 or the smallest positive step
+  const bodyStep = state.scaleSteps.find(s => s.index === 0) ?? state.scaleSteps[0]
+
+  return (
+    <div className="sticky top-8">
+      <h3 className="text-sm font-medium text-gray-700 mb-4">Type Preview</h3>
+      <div className="bg-white border border-gray-200 rounded-lg p-6 space-y-5">
+        {headings.map(({ label, step }) => (
+          <div key={label}>
+            <span className="text-[10px] font-mono text-gray-400 uppercase tracking-wider">{label} — {step.sizePx}px</span>
+            <p
+              style={{
+                fontSize: `${Math.min(step.sizePx, 80)}px`,
+                lineHeight: step.lineHeight,
+                letterSpacing: step.letterSpacing ?? undefined,
+                fontFamily: headingFont,
+                fontWeight: 700,
+              }}
+              className="text-gray-900 mt-0.5"
+            >
+              The quick brown fox
+            </p>
+          </div>
+        ))}
+        <div className="border-t border-gray-100 pt-4">
+          <span className="text-[10px] font-mono text-gray-400 uppercase tracking-wider">body — {bodyStep.sizePx}px</span>
+          <p
+            style={{
+              fontSize: `${bodyStep.sizePx}px`,
+              lineHeight: bodyStep.lineHeight,
+              fontFamily: bodyFont,
+              fontWeight: 400,
+            }}
+            className="text-gray-700 mt-0.5"
+          >
+            Typography is the art and technique of arranging type to make written language legible, readable, and appealing when displayed. A good type system provides visual hierarchy and rhythm across your entire application.
+          </p>
         </div>
       </div>
     </div>
@@ -418,10 +456,12 @@ export function ScaleStep() {
           {state.scaleMethod === 'modular-scale' && <ModularScaleControls />}
           {state.scaleMethod === 'utopia-fluid' && <FluidScaleControls />}
           {state.scaleMethod === 'tailwind' && <TailwindScaleControls />}
+
+          <ComputedScaleTable />
         </div>
 
         <div>
-          <ScalePreview />
+          <HeadingPreview />
         </div>
       </div>
     </div>

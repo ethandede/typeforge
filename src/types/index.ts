@@ -113,6 +113,7 @@ export interface ElementMapping {
   lineHeight: number
   letterSpacing: string | null
   textTransform: 'none' | 'uppercase' | 'lowercase' | 'capitalize'
+  marginTop: string
   marginBottom: string
 }
 

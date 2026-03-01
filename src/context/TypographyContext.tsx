@@ -104,8 +104,8 @@ function getDefaultConfigForMethod(method: ScaleMethod): ScaleConfig {
       return {
         method: 'modular-scale',
         baseSize: 16,
-        ratio: 1.25,
-        stepsAbove: 5,
+        ratio: 1.2,
+        stepsAbove: 6,
         stepsBelow: 2,
       }
     case 'utopia-fluid':
@@ -129,8 +129,8 @@ function getDefaultConfigForMethod(method: ScaleMethod): ScaleConfig {
       return {
         method: 'modular-scale',
         baseSize: 16,
-        ratio: 1.25,
-        stepsAbove: 5,
+        ratio: 1.2,
+        stepsAbove: 6,
         stepsBelow: 2,
       }
   }
